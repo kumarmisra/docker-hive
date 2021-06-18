@@ -2,6 +2,7 @@ FROM bde2020/hadoop-base:latest
 
 MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
+MAINTAINER Kumar Misra <misra.kumar@gmail.com>
 
 # Allow buildtime config of HIVE_VERSION
 ARG HIVE_VERSION
