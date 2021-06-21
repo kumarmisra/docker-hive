@@ -41,6 +41,10 @@ ADD conf/hive-log4j2.properties $HIVE_HOME/conf
 ADD conf/ivysettings.xml $HIVE_HOME/conf
 ADD conf/llap-daemon-log4j2.properties $HIVE_HOME/conf
 
+# Changed for https://issues.apache.org/jira/browse/HIVE-22915
+RUN rm -rf /opt/hive/lib/guava-19.0.jar
+RUN cp /opt/hadoop-3.2.1/share/hadoop/hdfs/lib/guava-27.0-jre.jar /opt/hive/lib/
+
 COPY startup.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh
 
